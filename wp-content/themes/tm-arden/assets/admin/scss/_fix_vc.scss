@@ -1,0 +1,22 @@
+.vc_ui-panel-content {
+	margin-top: 0 !important;
+}
+
+/*  Fixed font and text colour in visual composer not showing */
+.mce-panel.mce-menu,
+.mce-floatpanel.mce-popover.mce-bottom.mce-start {
+	z-index: 100012 !important;
+}
+
+.col-break {
+	&:not(.vc_dependent-hidden) {
+		+ .vc_dependent-hidden:not(.vc_col-sm-12) {
+			display: block !important;
+			visibility: hidden;
+		}
+	}
+}
+
+.vc_column-no-padding {
+	padding-top: 0 !important;
+}

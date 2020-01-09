@@ -1,0 +1,224 @@
+.tm-button {
+	@extend %transit;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	line-height: 1.2;
+	&.tm-button-full-wide {
+		width: 100%;
+		text-align: center;
+	}
+	&.style-1 {
+		padding: 0 37px;
+		height: 57px;
+		border-width: 3px;
+		border-style: solid;
+		border-radius: 30px;
+		text-transform: uppercase;
+		letter-spacing: 1.75px;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 51px;
+		&.tm-button-default {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+		&.tm-button-primary,
+		&.tm-button-secondary {
+			color: #ffffff;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+		&.tm-button-black {
+			border-color: #000000;
+			background-color: #000000;
+			color: #ffffff;
+			&:hover {
+				background-color: transparent;
+				color: #000000;
+			}
+		}
+		&.tm-button-white {
+			border-color: #ffffff;
+			background-color: #ffffff;
+			&:hover {
+				background-color: transparent;
+				color: #ffffff;
+			}
+		}
+		&.tm-button-grey {
+			border-color: #cccccc;
+			background-color: #cccccc;
+			color: #ffffff;
+			&:hover {
+				background-color: transparent;
+				color: #cccccc;
+			}
+		}
+		&.tm-button-lg {
+			padding: 0 47px;
+			height: 67px;
+			border-radius: 40px;
+			font-size: 16px;
+			line-height: 61px;
+		}
+		&.tm-button-sm {
+			padding: 0 27px;
+			height: 47px;
+			font-size: 14px;
+			line-height: 41px;
+		}
+		&.tm-button-xs {
+			padding: 0 17px;
+			height: 40px;
+			border-width: 2px;
+			font-size: 12px;
+			line-height: 36px;
+		}
+		i {
+			margin-left: 10px;
+		}
+	}
+	&.style-2 {
+		padding: 0 37px;
+		height: 57px;
+		border-width: 3px;
+		border-style: solid;
+		border-radius: 30px;
+		text-transform: uppercase;
+		letter-spacing: 1.75px;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 51px;
+		&.tm-button-default {
+			background-color: transparent;
+		}
+		&.tm-button-primary,
+		&.tm-button-secondary {
+			background-color: transparent;
+			&:hover {
+				color: #ffffff;
+			}
+		}
+		&.tm-button-black {
+			background-color: transparent;
+			color: #000000;
+			border-color: #000000;
+			&:hover {
+				background-color: #000000;
+				color: #ffffff;
+			}
+		}
+		&.tm-button-white {
+			background-color: transparent;
+			color: #ffffff;
+			&:hover {
+				border-color: #ffffff;
+				background-color: #ffffff;
+				color: initial;
+			}
+		}
+		&.tm-button-grey {
+			border-color: #cccccc;
+			background-color: transparent;
+			&:hover {
+				background-color: #cccccc;
+				color: #ffffff;
+			}
+		}
+		&.tm-button-lg {
+			padding: 0 47px;
+			height: 67px;
+			border-radius: 40px;
+			font-size: 16px;
+			line-height: 61px;
+		}
+		&.tm-button-sm {
+			padding: 0 27px;
+			height: 47px;
+			font-size: 14px;
+			line-height: 41px;
+		}
+		&.tm-button-xs {
+			padding: 0 17px;
+			height: 40px;
+			border-width: 2px;
+			font-size: 12px;
+			line-height: 36px;
+		}
+		i {
+			margin-left: 10px;
+		}
+	}
+	&.style-3 {
+		padding: 0;
+		border: 0;
+		letter-spacing: 0;
+		font-size: 18px;
+		background-color: transparent;
+		height: 35px;
+		span {
+			transition: padding .3s cubic-bezier(.645, .045, .355, 1);
+			border: 0;
+			border-bottom-width: 1px;
+			border-style: solid;
+			display: inline-block;
+			padding-bottom: 3px;
+		}
+		&:hover {
+			span {
+				padding-bottom: 13px;
+			}
+		}
+		&.tm-button-black {
+			color: #000000;
+		}
+		&.tm-button-white {
+			color: #ffffff;
+		}
+		&.tm-button-grey {
+			color: #cccccc;
+		}
+		&.tm-button-lg {
+			font-size: 20px;
+		}
+		&.tm-button-sm {
+			font-size: 16px;
+		}
+		&.tm-button-xs {
+			font-size: 14px;
+		}
+		i {
+			margin-left: 10px;
+		}
+	}
+}
+
+.rev-btn {
+	transition: background-color .5s cubic-bezier(.645, .045, .355, 1), border-color .5s cubic-bezier(.645, .045, .355, 1), color .5s cubic-bezier(.645, .045, .355, 1) !important;
+	i {
+		@extend %transit;
+		margin-left: 8px;
+	}
+}
+
+.tm-button-2 {
+	i {
+		color: rgba(255, 255, 255, .5);
+	}
+	&:hover {
+		i {
+			color: #989898;
+		}
+	}
+}
+
+.tm-button-1,
+.tm-button-4 {
+	i {
+		opacity: .5;
+		transition: none;
+	}
+}

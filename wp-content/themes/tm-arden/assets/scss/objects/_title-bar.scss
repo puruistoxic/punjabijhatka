@@ -1,0 +1,28 @@
+.page-title-bar {
+	position: relative;
+}
+
+.page-title-bar-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.page-title-bar-inner {
+	text-align: center;
+	> div {
+		width: 100%;
+	}
+}
+
+.page-title-bar-heading {
+	margin-bottom: 7px;
+}
+
+.page-breadcrumb {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}

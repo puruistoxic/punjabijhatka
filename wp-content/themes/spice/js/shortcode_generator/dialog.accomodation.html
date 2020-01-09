@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<title>Create "Accomodation" Shortcode</title>
+		<!-- Disable browser caching of dialog window -->
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+		<style type='text/css'>
+			/* Insert CSS for dialog here */
+			#addmore { font-size: 1.2em; color: #333;  }
+			
+			.main-section > div{ padding: 5px 0; }
+			.main-section input{ padding: 2px 0; margin:0 5px; }
+			body { font-family: "Open Sans",sans-serif;}
+			.form-horizontal .control-label {
+		        padding-top:7px;
+		        margin-bottom: 0;
+		        text-align: right
+		    }
+			a#add-one { margin-right: 10px;float: right; position: fixed; right: 0; background-color: rgb(118, 194, 6); padding: 5px 10px; top: 0; }
+		</style>
+		
+	</head>
+	<body>
+			<div class="container-fluid">
+					<div class="row">
+							<div class="col-xs-12">
+								<h3>Add an Accomodation</h3> 
+								<div class="addmore"><a id="add-one" href="#" class="glyphicon glyphicon-plus">Add</a></div>
+							</div>						
+
+							<div class="col-xs-12">								
+								<form id="accomodations" action="#accomodations" class="form-horizontal">
+									<div class="mx"></div>
+								</form>	
+							</div>
+
+
+					</div>
+			</div>
+		
+		
+		
+				
+		<script type="text/javascript">
+			var args = top.tinymce.activeEditor.windowManager.getParams();
+			var jQuery = args['jQuery'];
+			var context = document.getElementsByTagName("body")[0];
+			jQuery(function($){
+				var x = 1; //initlal text box count
+				var section = $('.mx', context);
+				var str='';
+				$("#add-one", context).on('click', function(e) {
+					e.preventDefault();
+
+					str='<div class="col-xs-12 form-group accom_field">';
+						str+='<div class="col-xs-5">';
+							str+='<input class="form-control" id="accomodation_'+x+'" type="text" size="12" maxlength="10" name="accomodation[]" placeholder="No.of Heads" />';
+						str+='</div>';
+						str+='<div class="col-xs-5">';
+							str+='<input class="form-control" id="details_'+x+'" maxlength="10" size="12" type="text" name="details[]" placeholder="Accomodation Text" />';
+						str+='</div>';
+						str+='<div class="col-xs-2">';
+							str+='<a href="#" class="remove_field glyphicon glyphicon-remove"></a>';
+						str+='</div>';
+					str+='</div>';
+
+					$(section).append(str);
+					x++; //text box increment
+					if($("#addshortcode", context).length == 0)
+					{
+						$(section).after('<input type="button" class="btn btn-primary btn-addshortcode" value="Add To Content" id="addshortcode"/></div>');
+					}
+				});
+				$('.mx', context).on('click', '.remove_field', function(e) 
+				{
+					e.preventDefault();
+					if(x > 0)
+					{
+			            $(this).closest('.accom_field').remove();
+						x--; //text box decrement
+					}					
+				});
+				$('#accomodations', context).on('click', '#addshortcode', function(e) {
+					var str='';
+					e.preventDefault();
+					if(x > 0){
+						$("form#accomodations input[name='accomodation[]']", context).each( function() {
+				            if( !isNaN(this.value) && Boolean(this.value) ) {				              
+							   str+='[spice_accomodation seats="' + this.value + '"';
+								   $(this).next().each( function() {
+									   if( !isNaN(this.value) && Boolean(this.value) ) {
+									   		str+=' details="' + this.value + '"';
+									   }
+								   });
+							   str+=']';
+				            }
+				        });
+					}
+					if(str!=='') {
+						str='[spice_accomodations]'+ str +'[/spice_accomodations]';
+						top.tinymce.activeEditor.execCommand('mceInsertContent', false, str);	
+					}else{
+						alert("Please add proper shortcode values!");
+					}				
+				});
+				
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+.rev_slider .slide-overlay .slotholder:after {
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	z-index: 999;
+}
+
+.slide-overlay-black .slotholder:after {
+	background-color: #000000;
+}
+
+.slide-overlay-white .slotholder:after {
+	background-color: #ffffff;
+}
+
+.slide-opacity-90 .slotholder:after {
+	opacity: .9;
+}
+
+.slide-opacity-80 .slotholder:after {
+	opacity: .8;
+}
+
+.slide-opacity-70 .slotholder:after {
+	opacity: .7;
+}
+
+.slide-opacity-60 .slotholder:after {
+	opacity: .6;
+}
+
+.slide-opacity-50 .slotholder:after {
+	opacity: .5;
+}
+
+.slide-opacity-40 .slotholder:after {
+	opacity: .4;
+}
+
+.slide-opacity-30 .slotholder:after {
+	opacity: .3;
+}
+
+.slide-opacity-20 .slotholder:after {
+	opacity: .2;
+}
+
+.slide-opacity-10 .slotholder:after {
+	opacity: .1;
+}
+
+.rev-btn {
+	transition: all .5s cubic-bezier(.645, .045, .355, 1) !important;
+}
+
+.rev-btn i {
+	margin-left: 8px;
+}
+
+.tm-button-2 i {
+	color: rgba(255, 255, 255, .5);
+}
+
+.tm-button-2:hover i {
+	color: #989898;
+}
+
+.tm-label {
+	display: inline-block;
+	padding: .4em .8em;
+	margin: 0 10px 2px 0;
+	font-weight: 700;
+	line-height: 1;
+	color: #ffffff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+.tm-label-info {
+	background-color: #337ab7;
+}
+
+.tm-label-success {
+	background-color: #5cb85c;
+}
+
+.tm-label-warning {
+	background-color: #f0ad4e;
+}
+
+.tm-label-error {
+	background-color: #d9534f;
+}

@@ -1,0 +1,48 @@
+#cta_metabox
+{
+	display:none;
+}
+.home-featured-order-cta
+{
+	/*display:none;*/
+}
+body .cmb2-metabox .cmb-repeat-group-wrap
+{
+	max-width: 100%;
+}
+.cmb2-metabox-title
+{
+  font-size: 24px !important;
+}
+.no-devider
+{
+	padding: 1.8em 0;
+}
+.title-align input[type=radio]{
+    width: 0px !important;
+    opacity:0 !important;
+}
+.title-align .fa
+{
+	font-size: 18px;
+}
+.title-align .fa.selected
+{
+	border:1px solid #ff0000;
+	padding: 4px;
+}
+/**********************************/
+
+.contact-map-class
+{
+   display: none;
+}
+.show-map-settings
+{
+	display: block !important;
+}
+.ui-slider.ui-widget-content .ui-widget-header
+{
+	background: #cccccc !important;
+	left: 0 !important;
+}

@@ -1,0 +1,13 @@
+.page-footer-inner {
+	position: relative;
+	padding: 100px 0 50px;
+}
+
+.page-footer-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+}

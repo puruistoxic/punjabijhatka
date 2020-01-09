@@ -1,0 +1,155 @@
+.tm-swiper {
+	position: relative;
+	z-index: 1;
+	.swiper-container {
+		width: 100%;
+	}
+	.swiper-pagination {
+		position: static;
+		text-align: center;
+		margin-top: 70px;
+	}
+	&.equal-height {
+		.swiper-wrapper {
+			display: flex;
+			align-items: stretch;
+		}
+		.swiper-slide {
+			display: flex;
+			height: auto;
+		}
+	}
+	&.v-center {
+		.swiper-slide {
+			align-self: center;
+		}
+	}
+	&.pagination-style-1 {
+		.swiper-pagination-bullet {
+			@extend %transit;
+			box-sizing: border-box;
+			margin: 0 5px;
+			width: 15px;
+			height: 15px;
+			border: 3px solid #e6e8ee;
+			background: transparent;
+			opacity: 1;
+		}
+	}
+	.swiper-nav-button {
+		@extend %transit;
+		user-select: none;
+		text-align: center;
+		background-image: none;
+		&.swiper-button-disabled {
+			display: none;
+		}
+	}
+	&.nav-style-1 {
+		.swiper-nav-button {
+			margin-top: -25px;
+			width: 50px;
+			height: 50px;
+			font-size: 54px;
+			line-height: 50px;
+		}
+		.swiper-button-next {
+			right: -80px;
+		}
+		.swiper-button-prev {
+			left: -80px;
+		}
+		&.has-pagination {
+			.swiper-nav-button {
+				margin-top: -74px;
+			}
+		}
+	}
+	&.nav-style-2,
+	&.nav-style-3 {
+		.swiper-nav-button {
+			margin-top: -20px;
+			width: 70px;
+			height: 70px;
+			border: 1px solid #eeeeee;
+			border-radius: 50%;
+			background: #ffffff;
+			color: #222222;
+			font-size: 30px;
+			line-height: 70px;
+			&:hover {
+				color: #ffffff;
+				box-shadow: none;
+				border-color: transparent;
+			}
+		}
+		&.has-pagination {
+			.swiper-nav-button {
+				margin-top: -69px;
+			}
+		}
+	}
+
+	&.nav-style-2 {
+		.swiper-button-next {
+			right: -100px;
+		}
+		.swiper-button-prev {
+			left: -100px;
+		}
+	}
+
+	&.nav-style-3 {
+		.swiper-button-next {
+			right: 50px;
+		}
+		.swiper-button-prev {
+			left: 50px;
+		}
+	}
+
+	&.nav-style-4 {
+		.swiper-nav-button {
+			margin-top: -25px;
+			width: 50px;
+			height: 50px;
+			font-size: 54px;
+			line-height: 50px;
+		}
+		.swiper-button-next {
+			right: 20px;
+		}
+		.swiper-button-prev {
+			left: 20px;
+		}
+		&.has-pagination {
+			.swiper-nav-button {
+				margin-top: -74px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.tm-swiper {
+		&.nav-style-1 {
+			.swiper-button-prev {
+				left: 10px;
+			}
+			.swiper-button-next {
+				right: 10px;
+			}
+		}
+		&.nav-style-2 {
+			.swiper-nav-button {
+				margin-top: -35px;
+			}
+			.swiper-button-prev {
+				left: 10px;
+			}
+			.swiper-button-next {
+				right: 10px;
+			}
+		}
+	}
+}

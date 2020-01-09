@@ -1,0 +1,23 @@
+.tm-accordion {
+	margin: 0 0 30px;
+	> .accordion-section {
+		margin-bottom: 25px;
+		overflow: hidden;
+	}
+	.accordion-title {
+		display: block;
+		padding: 10px 0;
+		font-size: 20px;
+		text-decoration: none;
+		line-height: 1.2;
+		position: relative;
+		cursor: pointer;
+	}
+	.accordion-content {
+		padding: 27px 0 28px;
+		display: none;
+	}
+	.accordion-title {
+		border-bottom: 1px solid #eeeeee;
+	}
+}

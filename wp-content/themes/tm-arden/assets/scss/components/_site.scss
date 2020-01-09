@@ -1,0 +1,84 @@
+/* Begin Make footer always bottom of page */
+@media only screen and (min-width: 1024px) {
+	#footer-wrap {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+	}
+	.footer-always-bottom {
+		height: 100%;
+		.site {
+			min-height: 100%;
+			position: relative;
+		}
+		.page-footer-wrapper {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+	.page-footer-parallax {
+		&:not(.page-template-one-page-scroll) {
+			height: 100%;
+			.site {
+				min-height: 100%;
+				position: static;
+			}
+			.content-wrapper {
+				position: relative;
+				z-index: 3;
+				background: inherit;
+			}
+			.page-footer-wrapper {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.site {
+	overflow: hidden;
+}
+
+.home {
+	&.blog {
+		.page-main-content {
+			padding-top: 100px;
+		}
+		.page-content {
+			background-color: #f8f8f8;
+		}
+	}
+}
+
+body {
+	&.archive {
+		&:not(.post-type-archive):not(.woocommerce) {
+			background-color: #f8f8f8;
+			.page-main-content {
+				padding-top: 50px;
+			}
+		}
+	}
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-only($breakpoint) {
+		.hidden-#{$breakpoint} {
+			display: none;
+		}
+	}
+}
+
+[visibility='visible'] {
+	display: block;
+}
+
+[visibility='hidden'] {
+	display: none;
+}

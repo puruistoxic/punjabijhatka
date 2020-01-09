@@ -1,0 +1,168 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comments-title,
+.comment-reply-title {
+	margin-bottom: 30px;
+	font-size: 24px;
+}
+
+.comment-list-wrap {
+	padding: 50px;
+}
+
+.comment-list {
+	margin: 0 0 74px;
+	padding: 0;
+	.comment {
+		@extend %clearfix;
+		list-style-type: none;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid #eeeeee;
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+	.children {
+		margin-top: 40px;
+		border-top: 1px solid #eeeeee;
+		padding-top: 40px;
+		padding-left: 130px;
+		.children {
+			padding-left: 50px;
+			.comment-datetime {
+				position: static;
+			}
+		}
+	}
+	.comment-author {
+		float: left;
+		img {
+			border-radius: 50%;
+		}
+	}
+	.comment-content {
+		font-size: 16px;
+		margin-left: 146px;
+		overflow: hidden;
+	}
+	.fn {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 18px;
+		font-style: normal;
+		a {
+			font-size: inherit;
+			font-style: inherit;
+		}
+	}
+	.comment-text {
+		margin-bottom: 13px;
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.comment-awaiting-messages {
+		display: block;
+	}
+	.comment-meta {
+		color: #a9adb9;
+		span,
+		a {
+			color: #a9adb9;
+			font-size: 16px;
+		}
+	}
+	.comment-respond {
+		margin-top: 30px;
+	}
+}
+
+.comment-form-wrap {
+	.comment-respond {
+		padding: 50px;
+		margin-bottom: 30px;
+		border: 1px solid #eeeeee;
+		background-color: #ffffff;
+	}
+}
+
+.comment-form {
+	textarea {
+		height: 45px;
+	}
+	input[type="text"],
+	input[type="email"] {
+		width: 100%;
+	}
+	.comment-form-comment {
+		margin: 0 0 52px;
+	}
+	.comment-form-author,
+	.comment-form-email {
+		margin: 0 0 58px;
+	}
+	p.form-submit {
+		margin: 0 0 30px;
+		i {
+			color: #999999;
+			margin-left: 10px;
+			font-size: 14px;
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.comment-list {
+		.vcard {
+			img {
+				width: 50px;
+			}
+		}
+		.children,
+		.children .children {
+			padding-left: 20px;
+		}
+		.comment-content {
+			margin-left: 80px;
+		}
+		.comment-datetime {
+			position: static;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.comment-list {
+		.comment {
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+		}
+		.children {
+			margin-top: 30px;
+			padding-top: 30px;
+		}
+		.children,
+		.children .children {
+			padding-left: 20px;
+		}
+	}
+	.comment-list-wrap {
+		padding: 40px;
+	}
+	.comment-form-wrap {
+		.comment-respond {
+			padding: 40px;
+		}
+	}
+}

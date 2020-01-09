@@ -1,0 +1,54 @@
+.tm-counter {
+	margin-bottom: 30px;
+	&.style-1 {
+		.icon {
+			position: relative;
+			margin: 0 auto 30px;
+			width: 100px;
+			height: 100px;
+			border: 2px solid #111111;
+			border-radius: 50%;
+			color: #111111;
+			font-size: 40px;
+			i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+		.number-wrap {
+			display: flex;
+			margin-bottom: 10px;
+			font-size: 56px;
+			line-height: 1.2;
+		}
+		.text {
+			font-size: 18px;
+		}
+		&.skin-light {
+			.icon {
+				border-color: #ffffff;
+				color: #ffffff;
+			}
+			.number-wrap {
+				color: #ffffff;
+			}
+		}
+	}
+	&.align-left {
+		.number-wrap {
+			justify-content: flex-start;
+		}
+	}
+	&.align-center {
+		.number-wrap {
+			justify-content: center;
+		}
+	}
+	&.align-right {
+		.number-wrap {
+			justify-content: flex-end;
+		}
+	}
+}

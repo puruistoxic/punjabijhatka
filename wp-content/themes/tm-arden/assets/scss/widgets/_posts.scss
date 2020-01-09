@@ -1,0 +1,44 @@
+.tm-posts-widget {
+	.post-item {
+		@extend %clearfix;
+		display: flex;
+		+ .post-item {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #eeeeee;
+		}
+	}
+	.post-widget-thumbnail {
+		float: left;
+		margin-right: 20px;
+		width: 80px;
+		height: 80px;
+		position: relative;
+		&:hover {
+			.post-widget-overlay {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	.post-widget-title {
+		margin-bottom: 5px;
+		a {
+			font-size: 14px;
+		}
+	}
+	.post-date {
+		font-size: 13px;
+	}
+	.post-widget-overlay {
+		@extend %transit;
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .6);
+		opacity: 0;
+	}
+}

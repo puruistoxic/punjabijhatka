@@ -1,0 +1,50 @@
+.page-template-portfolio-fullscreen-carousel-slider {
+	.page-header-inner {
+		position: fixed;
+		width: 100%;
+	}
+	.tm-m-scrollbar {
+		width: 100%;
+	}
+	.portfolio-item {
+		position: relative;
+		background-color: #111;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100%;
+		float: left;
+	}
+	.portfolio-info {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 60px;
+	}
+	.portfolio-title {
+		margin-bottom: 14px;
+		color: #ffffff;
+		font-size: 30px;
+		font-weight: bold;
+		letter-spacing: -0.21px;
+		line-height: 1.05em;
+		a {
+			font-size: inherit;
+			color: inherit;
+		}
+	}
+	.portfolio-categories {
+		a {
+			color: inherit;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.page-template-portfolio-fullscreen-carousel-slider {
+		.portfolio-info {
+			padding: 30px 30px 50px;
+		}
+	}
+}

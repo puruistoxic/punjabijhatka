@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>Create "Hour" Shortcode</title>
+		<!-- Disable browser caching of dialog window -->
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+		<style type='text/css'>
+			/* Insert CSS for dialog here */
+			.form-horizontal .control-label {
+		        padding-top:7px;
+		        margin-bottom: 0;
+		        text-align: right
+		    }
+			#addmore { font-size: 1.2em; color: #333; }
+			body { color: #444; font-family: "Open Sans",sans-serif; font-size: 13px; line-height: 1.4em; }
+			body,div,p,h3{ margin:0; padding:0; }
+			.main-section > div{ padding: 5px 0; }
+			.main-section input{ padding: 2px 0; margin:0 5px; }
+			a#add-one { float: right; position: fixed; right: 0; background-color: rgb(118, 194, 6); padding: 5px 10px; top: 0; }
+		</style>
+		
+	</head>
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+					<div class="col-xs-12">
+						<h3>Add Working Hours </h3>				
+					</div>				
+					<div class="col-xs-12">
+						<form id="buttonShortcode" action="#button" class="form-horizontal">						
+								
+									<div class="form-group">
+											<label for="openingDay" class="col-xs-4 control-label">Opening Day:</label>
+											<div class="col-xs-8">
+												<input id="openingDay" class="form-control" type="text" size="12" maxlength="10" name="openingDay"/>
+											</div>
+									</div>
+									<div class="form-group">
+										<label for="openingTime" class="col-xs-4 control-label">Opening Time:</label>
+										<div class="col-xs-8">
+											<input id="openingTime" class="form-control" type="text" size="12" maxlength="10" name="openingTime"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="closingTime" class="col-xs-4 control-label">Closing Time:</label>
+										<div class="col-xs-8">
+											<input id="closingTime" class="form-control" type="text" size="12" maxlength="12" name="closingTime"/>
+										</div>
+									</div>					
+									<div class="col-xs-8 pull-right">
+									  	<button class="btn btn-primary" id="addshortcode">
+									  		Add To Content
+									  	</button>
+									</div>
+								
+							
+						</form>	
+					</div>
+			</div>
+		</div>
+		
+
+		
+		
+		
+		
+		<script type="text/javascript">
+			var args = top.tinymce.activeEditor.windowManager.getParams();
+			var jQuery = args['jQuery'];
+			var editor = args['editor'];
+			var context = document.getElementsByTagName("body")[0];
+			jQuery(function($){
+				var x = 1; //initlal text box count
+				var section = $('.main-section', context);
+				
+				$('#buttonShortcode', context).on('click', '#addshortcode', function(e) {					
+					var str='';
+					e.preventDefault();
+					var openingDay =  $("form#buttonShortcode #openingDay", context).val();
+					var openingTime 	= $("form#buttonShortcode #openingTime", context).val();
+					var closingTime 		= $("form#buttonShortcode #closingTime", context).val();
+					
+					if( (''!=openingDay && Boolean(openingDay)) && (''!=openingTime && Boolean(openingTime)) && (''!=closingTime && Boolean(closingTime))) {
+					   str='[spice_hours day="' + openingDay + '" open="' + openingTime + '" closing="' + closingTime + '"]';
+		            }			
+					if(str!=='') {
+						top.tinymce.activeEditor.execCommand('mceInsertContent', false, str);	
+		            
+					}else{
+						alert("Please add proper shortcode values!");
+					}	
+					editor.windowManager.close(this);			
+				});
+				
+			});
+		</script>
+	</body>
+</html>

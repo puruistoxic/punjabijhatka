@@ -1,0 +1,16 @@
+.image-over {
+	z-index: 1;
+	position: relative;
+}
+
+.rmbg-md-down {
+	@include media-breakpoint-down(lg) {
+		background-image: none !important;
+	}
+}
+
+.rmbg-lg-down {
+	@include media-breakpoint-down(xl) {
+		background-image: none !important;
+	}
+}

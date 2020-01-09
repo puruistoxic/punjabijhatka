@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>Create "Button" Shortcode</title>
+		<!-- Disable browser caching of dialog window -->
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<style type='text/css'>
+			body { font-family: "Open Sans",sans-serif;}
+			.form-horizontal .control-label {
+		        padding-top:7px;
+		        margin-bottom: 0;
+		        text-align: right
+		    }
+		</style>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Add a Button</h3>						
+				</div>
+				<div class="col-xs-12">
+					<form id="buttonShortcode" action="#button" class="form-horizontal">
+					  <div class="form-group">
+				  		<label for="backgroundColor" class="col-xs-4 control-label">Background Color:</label>
+					    <div class="col-xs-8">
+					    	<input id="backgroundColor" class="form-control" type="text" size="12" maxlength="10" name="backgroundColor"/>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="buttonText" class="col-xs-4 control-label">Text:</label>
+						<div class="col-xs-8">
+							<input class="form-control" id="buttonText" type="text" size="12" maxlength="12" name="buttonText"/>
+						</div>
+					  </div>
+					  <div class="form-group">
+					  	<label for="buttonLink" class="col-xs-4 control-label">Link:</label>
+					  	<div class="col-xs-8"><input class="form-control" id="buttonLink" type="text" size="12" name="buttonLink"/></div>
+					  </div>
+					  <div class="form-group">
+					  	<label for="buttonIcon" class="col-xs-4 control-label">Icon URL:</label>
+					  	<div class="col-xs-8"><input class="form-control" id="buttonIcon" type="text" size="12" name="buttonIcon"/></div>
+					  </div>
+					  <div class="col-xs-8 pull-right">
+					  	<button class="btn btn-primary" id="addshortcode">
+					  		Add To Content
+					  	</button>
+					  </div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<script type="text/javascript">
+			var args = top.tinymce.activeEditor.windowManager.getParams();
+			var jQuery = args['jQuery'];
+			var editor = args['editor'];
+			var context = document.getElementsByTagName("body")[0];
+			jQuery(function($){
+				var x = 1; //initlal text box count
+				var section = $('.main-section', context);
+				
+				$('#buttonShortcode', context).on('click', '#addshortcode', function(e) {					
+					var str='';
+					e.preventDefault();
+					
+					var backgroundColor 	= $("form#buttonShortcode #backgroundColor", context).val();
+					var buttonText 		= $("form#buttonShortcode #buttonText", context).val();
+					var buttonLink			= $("form#buttonShortcode #buttonLink", context).val();
+					var buttonIcon 		= $("form#buttonShortcode #buttonIcon", context).val();
+					if( (''!=backgroundColor && Boolean(backgroundColor)) && (''!=buttonText && Boolean(buttonText)) && (''!=buttonLink && Boolean(buttonLink)) && (''!=buttonIcon && Boolean(buttonIcon)) ) {
+					   str='[spice_button background="' + backgroundColor + '" text="' + buttonText + '" link="' + buttonLink + '" icon="' + buttonIcon + '"]';
+		            }			
+					if(str!=='') 
+					{
+						top.tinymce.activeEditor.execCommand('mceInsertContent', false, str);
+						editor.windowManager.close(this);				
+		            
+					}else{
+						alert("Please add proper shortcode values!");
+					}
+							
+				});
+				
+			});
+		</script>
+	</body>
+</html>

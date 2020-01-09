@@ -1,0 +1,43 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">portfolio</custom-type>
+		<custom-type translate="1">testimonial</custom-type>
+	</custom-types>
+	<taxonomies>
+		<taxonomy translate="1">portfolio_category</taxonomy>
+		<taxonomy translate="1">portfolio_tags</taxonomy>
+		<taxonomy translate="1">testimonial_category</taxonomy>
+	</taxonomies>
+	<admin-texts>
+		<key name="theme_mods_tm-arden">
+			<key name="search_popup_text"/>
+			<key name="header_button_text"/>
+			<key name="breadcrumb_home_text"/>
+			<key name="portfolio_related_title"/>
+			<key name="search_page_no_results_text"/>
+			<key name="error404_page_title"/>
+			<key name="error404_page_text"/>
+			<key name="maintenance_title"/>
+			<key name="maintenance_sub_title"/>
+			<key name="maintenance_text"/>
+			<key name="maintenance_sub_text"/>
+			<key name="cs_title"/>
+			<key name="cs_text"/>
+		</key>
+		<key name="theme_mods_tm-arden-child">
+			<key name="search_popup_text"/>
+			<key name="header_button_text"/>
+			<key name="breadcrumb_home_text"/>
+			<key name="portfolio_related_title"/>
+			<key name="search_page_no_results_text"/>
+			<key name="error404_page_title"/>
+			<key name="error404_page_text"/>
+			<key name="maintenance_title"/>
+			<key name="maintenance_sub_title"/>
+			<key name="maintenance_text"/>
+			<key name="maintenance_sub_text"/>
+			<key name="cs_title"/>
+			<key name="cs_text"/>
+		</key>
+	</admin-texts>
+</wpml-config>

@@ -1,0 +1,23 @@
+.header03 {
+	.header-wrap {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	.branding {
+		width: 100%;
+	}
+	.headroom--not-top {
+		.container-fluid {
+			height: 100%;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.header03 {
+		.header-wrap {
+			padding: 0 85px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.header06 {
+	.header-wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	&.desktop-menu {
+		.header-right {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			//	width: 100%;
+		}
+
+		.branding,
+		.header-right {
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+
+		.branding {
+			left: 0;
+		}
+
+		.header-right {
+			right: 0;
+		}
+
+		.page-navigation-wrap {
+			position: static;
+			width: 100%;
+			flex-grow: 1;
+		}
+
+		.menu--primary {
+			position: static;
+		}
+	}
+
+	&.mobile-menu {
+		.branding {
+			width: 100%;
+		}
+	}
+}

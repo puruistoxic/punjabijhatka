@@ -1,0 +1,1 @@
+{"FooterWidgetDarkLogo":"Footer Widget Dark Logo","CopyrightSocialLinks":"Copyright Social Links","CopyrightSocialLinksLight":"Copyright Social Links Light","CopyrightPayment":"Copyright Payment","CopyrightSocialIconLight":"Copyright Social Icon Light"}

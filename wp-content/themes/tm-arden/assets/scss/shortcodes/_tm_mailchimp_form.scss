@@ -1,0 +1,76 @@
+.flex-layout {
+	display: flex;
+	margin-left: -15px;
+	margin-right: -15px;
+	.flex-full {
+		width: 100%;
+	}
+	> div {
+		padding: 0 15px;
+	}
+}
+
+.tm-mailchimp-form {
+	.form-wrap {
+		margin-bottom: 30px;
+	}
+	&.skin-primary,
+	&.skin-secondary {
+		input[type=text],
+		input[type=email] {
+			font-size: 24px;
+			&::-webkit-input-placeholder {
+				font-size: 24px;
+				color: inherit;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+				font-size: 24px;
+				color: inherit;
+			}
+
+			&::-moz-placeholder { /* Firefox 19+ */
+				font-size: 24px;
+				color: inherit;
+			}
+
+			&:-ms-input-placeholder {
+				font-size: 24px;
+				color: inherit;
+			}
+		}
+	}
+	&.skin-primary {
+		input[type=text],
+		input[type=email] {
+			color: red;
+		}
+	}
+	&.skin-secondary {
+		button,
+		input[type=submit],
+		input[type=reset] {
+			color: #ffffff;
+			&:hover,
+			&:focus {
+				color: #ffffff;
+			}
+		}
+		input[type=text],
+		input[type=email] {
+			&:focus {
+				border-bottom-color: #ffffff;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.flex-layout {
+		flex-wrap: wrap;
+		> div {
+			width: 100%;
+		}
+	}
+}

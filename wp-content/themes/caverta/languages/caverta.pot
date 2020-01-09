@@ -1,0 +1,704 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Caverta\n"
+"POT-Creation-Date: 2018-06-04 16:12+0300\n"
+"PO-Revision-Date: 2018-06-04 16:12+0300\n"
+"Last-Translator: \n"
+"Language-Team: matchthemes\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.8\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: esc_html_e;esc_html__;esc_attr__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:5
+msgid "404"
+msgstr ""
+
+#: 404.php:6
+msgid "Error, Page Not Found!"
+msgstr ""
+
+#: 404.php:14
+msgid "It looks like nothing was found at this location. Sorry about that."
+msgstr ""
+
+#: 404.php:15
+msgid "Go To Homepage"
+msgstr ""
+
+#: archive.php:15
+msgid "Browsing Category"
+msgstr ""
+
+#: archive.php:18
+msgid "Browsing Tag"
+msgstr ""
+
+#: archive.php:21 archive.php:24 archive.php:27
+msgid "Browsing Archives"
+msgstr ""
+
+#: archive.php:29
+msgid "Author Archive"
+msgstr ""
+
+#: archive.php:31
+msgid "Blog Archives"
+msgstr ""
+
+#: comments.php:3
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:11
+msgid "0 Comments"
+msgstr ""
+
+#: comments.php:11
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:11
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:17
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:18
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:19
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:35
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:38
+msgid "Name"
+msgstr ""
+
+#: comments.php:39
+msgid "Email"
+msgstr ""
+
+#: comments.php:40
+msgid "Website"
+msgstr ""
+
+#: comments.php:43
+msgid "Comments"
+msgstr ""
+
+#: comments.php:45
+msgid "Post Comment"
+msgstr ""
+
+#: functions.php:17
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:135
+msgid "Please fill the Name field!"
+msgstr ""
+
+#: functions.php:136
+msgid "Please fill the Email field!"
+msgstr ""
+
+#: functions.php:137
+msgid "Please provide a valid Email address!"
+msgstr ""
+
+#: functions.php:138
+msgid "Please fill the Message field!"
+msgstr ""
+
+#: functions.php:139
+msgid "Sending comment...!"
+msgstr ""
+
+#: functions.php:140
+msgid "Comment sent"
+msgstr ""
+
+#: functions.php:172
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:173
+msgid "Main sidebar that appears on a normal page."
+msgstr ""
+
+#: functions.php:182
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:184
+msgid "Widgets in this area are used in the first footer column"
+msgstr ""
+
+#: functions.php:193
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:195
+msgid "Widgets in this area are used in the second footer column"
+msgstr ""
+
+#: functions.php:204
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:206
+msgid "Widgets in this area are used in the third footer column"
+msgstr ""
+
+#: functions.php:215
+msgid "Footer 4"
+msgstr ""
+
+#: functions.php:217
+msgid "Widgets in this area are used in the fourth footer column"
+msgstr ""
+
+#: functions.php:245
+msgid "Custom Size"
+msgstr ""
+
+#: functions.php:265
+msgid "&larr; Newer"
+msgstr ""
+
+#: functions.php:267
+msgid "First"
+msgstr ""
+
+#: functions.php:273
+msgid "Last"
+msgstr ""
+
+#: functions.php:275
+msgid "Older &rarr;"
+msgstr ""
+
+#: functions.php:305
+msgid "Reply"
+msgstr ""
+
+#: include/assets/layouts/layout-1col.php:13
+#: include/assets/layouts/layout-1col_list_left.php:58
+#: include/assets/layouts/layout-2col_grid.php:49
+#: include/assets/layouts/layout-3col_grid.php:77
+msgid "NOTHING FOUND"
+msgstr ""
+
+#: include/assets/layouts/layout-1col.php:14
+#: include/assets/layouts/layout-1col_list_left.php:60
+#: include/assets/layouts/layout-2col_grid.php:50
+#: include/assets/layouts/layout-3col_grid.php:79
+msgid ""
+"Sorry, but it seems we can&rsquo;t find what you&rsquo;re looking for. Try a "
+"new search or the menu above."
+msgstr ""
+
+#: include/assets/layouts/layout-1col.php:23
+#: include/assets/layouts/layout-1col_list_left.php:79
+#: include/assets/layouts/layout-2col_grid.php:60
+#: include/assets/layouts/layout-3col_grid.php:98
+msgid "&larr; Prev"
+msgstr ""
+
+#: include/assets/layouts/layout-1col.php:24
+#: include/assets/layouts/layout-1col_list_left.php:80
+#: include/assets/layouts/layout-2col_grid.php:61
+#: include/assets/layouts/layout-3col_grid.php:99
+msgid "Next &rarr;"
+msgstr ""
+
+#: include/assets/layouts/layout-1col_list_left.php:32
+#: include/assets/layouts/layout-2col_grid.php:31
+#: include/assets/layouts/layout-3col_grid.php:47
+#: include/assets/layouts/layout-first_article_full.php:16
+msgid "Featured"
+msgstr ""
+
+#: include/assets/layouts/layout-1col_list_left.php:44
+#: include/assets/layouts/layout-2col_grid.php:36
+#: include/assets/layouts/layout-3col_grid.php:57
+#: include/assets/layouts/layout-first_article_full.php:24
+msgid "Read More"
+msgstr ""
+
+#: include/assets/layouts/layout-3col_grid.php:112
+msgid "3 Columns Grid"
+msgstr ""
+
+#: include/assets/layouts/layout-3col_grid.php:114
+msgid ""
+"This layout only works in full width mode. Go to Appearance > Customize > "
+"General Options > Blog - Sidebar Display and choose the Full Width option"
+msgstr ""
+
+#: include/customizer/customizer-options.php:22
+msgid "Headers"
+msgstr ""
+
+#: include/customizer/customizer-options.php:28
+msgid "General Options"
+msgstr ""
+
+#: include/customizer/customizer-options.php:34
+msgid "Typography"
+msgstr ""
+
+#: include/customizer/customizer-options.php:40
+msgid "Social Media"
+msgstr ""
+
+#: include/customizer/customizer-options.php:61
+msgid "Top Header Display"
+msgstr ""
+
+#: include/customizer/customizer-options.php:65
+msgid "Top Header 1"
+msgstr ""
+
+#: include/customizer/customizer-options.php:66
+msgid "Top Header 2"
+msgstr ""
+
+#: include/customizer/customizer-options.php:67
+msgid "Top Header 3"
+msgstr ""
+
+#: include/customizer/customizer-options.php:74
+msgid "Fixed Top Header"
+msgstr ""
+
+#: include/customizer/customizer-options.php:78
+#: include/customizer/customizer-options.php:195
+msgid "On"
+msgstr ""
+
+#: include/customizer/customizer-options.php:79
+#: include/customizer/customizer-options.php:196
+msgid "Off"
+msgstr ""
+
+#: include/customizer/customizer-options.php:86
+msgid "Header Button"
+msgstr ""
+
+#: include/customizer/customizer-options.php:89
+msgid "Add header button"
+msgstr ""
+
+#: include/customizer/customizer-options.php:95
+msgid "Mobile Business Info"
+msgstr ""
+
+#: include/customizer/customizer-options.php:103
+msgid "Add mobile menu business info"
+msgstr ""
+
+#: include/customizer/customizer-options.php:110
+msgid "Home - Slider Items"
+msgstr ""
+
+#: include/customizer/customizer-options.php:112
+msgid "Create home top slider. Add as much items as you want"
+msgstr ""
+
+#: include/customizer/customizer-options.php:115
+msgid "Slider Item"
+msgstr ""
+
+#: include/customizer/customizer-options.php:122
+msgid "Slider Text"
+msgstr ""
+
+#: include/customizer/customizer-options.php:123
+msgid "Add slider text"
+msgstr ""
+
+#: include/customizer/customizer-options.php:128
+msgid "Slider Image"
+msgstr ""
+
+#: include/customizer/customizer-options.php:129
+msgid "Upload image file"
+msgstr ""
+
+#: include/customizer/customizer-options.php:138
+msgid "Blog - Articles Layout"
+msgstr ""
+
+#: include/customizer/customizer-options.php:140
+msgid "Select the articles layout for blog page"
+msgstr ""
+
+#: include/customizer/customizer-options.php:153
+msgid "Blog - Sidebar Display"
+msgstr ""
+
+#: include/customizer/customizer-options.php:155
+msgid ""
+"Select how do you want to display the sidebar for home / archive pages "
+"( right / left / none )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:167
+msgid "Single Blog Page - Sidebar Display"
+msgstr ""
+
+#: include/customizer/customizer-options.php:169
+msgid "Select how do you want to display the sidebar for single blog pages"
+msgstr ""
+
+#: include/customizer/customizer-options.php:181
+msgid "Footer - Copyright"
+msgstr ""
+
+#: include/customizer/customizer-options.php:184
+msgid "Add footer copyright"
+msgstr ""
+
+#: include/customizer/customizer-options.php:190
+msgid "Scroll Top Button"
+msgstr ""
+
+#: include/customizer/customizer-options.php:193
+msgid "Show/Hide scroll to top button"
+msgstr ""
+
+#: include/customizer/customizer-options.php:205
+msgid "Body Text Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:214
+msgid "Link Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:222
+msgid "Heavy Color for Headings"
+msgstr ""
+
+#: include/customizer/customizer-options.php:232
+msgid "Menu Item - Normal State Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:240
+msgid "Menu Item - Hover State Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:248
+msgid "Menu Item - SubMenu Background Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:256
+msgid "Menu Item - SubMenu Normal Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:264
+msgid "Menu Item - SubMenu Hover Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:272
+msgid "Footer - Background Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:280
+msgid "Footer - Text Color"
+msgstr ""
+
+#: include/customizer/customizer-options.php:290
+msgid "Body - Font Family"
+msgstr ""
+
+#: include/customizer/customizer-options.php:293
+#: include/customizer/customizer-options.php:324
+msgid "Select a font family from the Google Web Fonts"
+msgstr ""
+
+#: include/customizer/customizer-options.php:301
+msgid "Body - Font Weight"
+msgstr ""
+
+#: include/customizer/customizer-options.php:304
+msgid "Add body font weights"
+msgstr ""
+
+#: include/customizer/customizer-options.php:311
+msgid "Body - Font Size"
+msgstr ""
+
+#: include/customizer/customizer-options.php:314
+msgid "Select body text font size ( in px )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:321
+msgid "Titles - Font Family"
+msgstr ""
+
+#: include/customizer/customizer-options.php:332
+msgid "Titles - Font Weight"
+msgstr ""
+
+#: include/customizer/customizer-options.php:335
+msgid "Add post titles font weights"
+msgstr ""
+
+#: include/customizer/customizer-options.php:342
+msgid "H1 - Font Size"
+msgstr ""
+
+#: include/customizer/customizer-options.php:345
+msgid "Select H1 heading font size ( in px )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:352
+msgid "H2 - Font Size"
+msgstr ""
+
+#: include/customizer/customizer-options.php:355
+msgid "Select H2 heading font size ( in px )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:362
+msgid "H3 - Font Size"
+msgstr ""
+
+#: include/customizer/customizer-options.php:365
+msgid "Select H3 heading font size ( in px )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:372
+msgid "H4 - Font Size"
+msgstr ""
+
+#: include/customizer/customizer-options.php:375
+msgid "Select H4 heading font size ( in px )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:382
+msgid "H5 - Font Size"
+msgstr ""
+
+#: include/customizer/customizer-options.php:385
+msgid "Select H5 heading font size ( in px )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:392
+msgid "H6 - Font Size"
+msgstr ""
+
+#: include/customizer/customizer-options.php:395
+msgid "Select H6 heading font size ( in px )"
+msgstr ""
+
+#: include/customizer/customizer-options.php:402
+msgid "Facebook URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:405
+msgid "Add Facebook URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:411
+msgid "Twitter URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:414
+msgid "Add Twitter URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:420
+msgid "Google Plus URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:423
+msgid "Add Google Plus URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:429
+msgid "Instagram URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:432
+msgid "Add Instagram URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:438
+msgid "Linkedin URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:441
+msgid "Add Linkedin URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:447
+msgid "Pinterest URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:450
+msgid "Add Pinterest URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:456
+msgid "Trip Advisor URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:459
+msgid "Add Trip Advisor URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:465
+msgid "YouTube URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:468
+msgid "Add YouTube URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:474
+msgid "Vimeo URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:477
+msgid "Add Vimeo URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:483
+msgid "Dribbble URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:486
+msgid "Add Dribbble URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:492
+msgid "Skype URL"
+msgstr ""
+
+#: include/customizer/customizer-options.php:495
+msgid "Add Skype URL"
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:920
+#: include/tgm-plugin/class-tgm-plugin-activation.php:2626
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:1027
+#: include/tgm-plugin/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3602
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3602
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: include/tgm-plugin/class-tgm-plugin-activation.php:3610
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: my-templates/template-fullscreen.php:48
+#: my-templates/template-fullwidth.php:33 my-templates/template-home.php:34
+#: page.php:47 single-mt_gallery.php:23 single.php:163
+msgid ""
+"Sorry, but it seems we can&rsquo;t find what you&rsquo;re looking for. Try "
+"the menu above."
+msgstr ""
+
+#: search.php:13
+msgid "Search Results"
+msgstr ""
+
+#: single.php:23
+msgid "By "
+msgstr ""
+
+#: single.php:69
+msgid "Next Page"
+msgstr ""
+
+#: single.php:70
+msgid "Previous Page"
+msgstr ""
+
+#: single.php:118
+msgid "Previous Image"
+msgstr ""
+
+#: single.php:125
+msgid "&larr; previous post"
+msgstr ""
+
+#: single.php:134
+msgid "next post &rarr;"
+msgstr ""
+
+#: single.php:145
+msgid "Next Image"
+msgstr ""

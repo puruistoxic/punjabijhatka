@@ -1,0 +1,38 @@
+.header05 {
+	.header-wrap {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		.branding {
+			width: 100%;
+		}
+	}
+	.header-right {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 100%;
+	}
+	.page-header-inner {
+		.container-fluid {
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+	}
+	.menu--primary {
+		text-align: right;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.header05 {
+		.page-header-inner {
+			.container-fluid {
+				height: 100%;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}

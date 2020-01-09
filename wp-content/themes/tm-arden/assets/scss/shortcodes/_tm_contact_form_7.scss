@@ -1,0 +1,146 @@
+.wpcf7 {
+	.wpcf7-response-output {
+		border: 0;
+		color: #ffffff;
+		margin: 20px 0 0;
+		padding: 10px 20px;
+	}
+	.wpcf7-validation-errors {
+		background: #f0ad4e;
+	}
+	.wpcf7-mail-sent-ok {
+		background: #5cb85c;
+	}
+	.wpcf7-not-valid-tip {
+		color: #d9534f;
+	}
+}
+
+.tm-contact-form-7 {
+	.wpcf7-form {
+		br {
+			display: none;
+		}
+	}
+
+	.wpcf7-form-control-wrap {
+		display: block;
+		margin-bottom: 30px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 70px;
+		}
+	}
+
+	.form-request-a-callback {
+		.wpcf7-form-control-wrap {
+			margin-bottom: 50px;
+		}
+	}
+
+	.wpcf7-textarea {
+		height: 57px;
+	}
+
+	.wpcf7-submit {
+		span,
+		i {
+			margin-left: 10px;
+			font-size: 14px;
+		}
+	}
+
+	.wpcf7-text,
+	.wpcf7-textarea,
+	.wpcf7-select {
+		font-size: 24px;
+		&::-webkit-input-placeholder {
+			color: inherit;
+			font-size: inherit;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+			color: inherit;
+			font-size: inherit;
+		}
+
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: inherit;
+			font-size: inherit;
+		}
+
+		&:-ms-input-placeholder {
+			color: inherit;
+			font-size: inherit;
+		}
+	}
+	&.skin-classic {
+		.wpcf7-textarea {
+			height: 150px;
+		}
+		.wpcf7-text,
+		.wpcf7-textarea {
+			background-color: #f5f5f5;
+			padding: 5px 10px;
+			border: inherit;
+			&:focus {
+				&::-webkit-input-placeholder {
+					color: inherit;
+				}
+
+				&:-moz-placeholder { /* Firefox 18- */
+					color: inherit;
+				}
+
+				&::-moz-placeholder { /* Firefox 19+ */
+					color: inherit;
+				}
+
+				&:-ms-input-placeholder {
+					color: inherit;
+				}
+			}
+		}
+		.wpcf7-form-control-wrap {
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+	}
+	&.skin-secondary {
+		.wpcf7-text,
+		.wpcf7-textarea,
+		.wpcf7-select {
+			background-color: transparent;
+			&:focus {
+				border-bottom-color: #ffffff;
+				color: #ffffff;
+			}
+			&::-webkit-input-placeholder {
+				color: inherit;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+				color: inherit;
+			}
+
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: inherit;
+			}
+
+			&:-ms-input-placeholder {
+				color: inherit;
+			}
+		}
+		.wpcf7-submit {
+			color: #ffffff;
+		}
+	}
+}
+
+.wpcf7-submit {
+	[class*="-2"] & {
+		@include media-breakpoint-up(lg) {
+			width: 100%;
+			padding: 0;
+		}
+	}
+}

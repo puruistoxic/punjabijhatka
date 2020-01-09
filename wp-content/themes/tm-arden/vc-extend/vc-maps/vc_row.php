@@ -1,0 +1,338 @@
+<?php
+
+$styling_tab   = esc_html__( 'Styling', 'tm-arden' );
+$separator_tab = esc_html__( 'Separator', 'tm-arden' );
+$onepage_tab   = esc_html__( 'Onepage Scroll Options', 'tm-arden' );
+vc_remove_param( 'vc_row', 'css' );
+vc_remove_param( 'vc_row', 'gap' );
+
+vc_add_params( 'vc_row', array_merge( Insight_VC::get_vc_spacing_tab(), array(
+	array(
+		'heading'     => esc_html__( 'Gutter', 'tm-arden' ),
+		'type'        => 'number_responsive',
+		'param_name'  => 'gutter',
+		'min'         => 0,
+		'max'         => 100,
+		'step'        => 2,
+		'suffix'      => 'px',
+		'media_query' => array(
+			'lg' => '',
+			'md' => '',
+			'sm' => '',
+			'xs' => '',
+		),
+	),
+	array(
+		'heading'     => esc_html__( 'Visible Content Overflow.', 'tm-arden' ),
+		'description' => esc_html__( 'Make content of row visible when overflow. ( Usage when row has negative margin.)', 'tm-arden' ),
+		'type'        => 'checkbox',
+		'param_name'  => 'visible_overflow',
+	),
+	array(
+		'group'       => $styling_tab,
+		'heading'     => esc_html__( 'Border Radius', 'tm-arden' ),
+		'description' => esc_html__( 'Ex: 5px or 50%', 'tm-arden' ),
+		'type'        => 'textfield',
+		'param_name'  => 'border_radius',
+	),
+	array(
+		'group'       => $styling_tab,
+		'heading'     => esc_html__( 'Box Shadow', 'tm-arden' ),
+		'description' => esc_html__( 'Ex: 0 20px 30px #ccc', 'tm-arden' ),
+		'type'        => 'textfield',
+		'param_name'  => 'box_shadow',
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Background Color', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'background_color',
+		'value'      => array(
+			esc_html__( 'None', 'tm-arden' )            => '',
+			esc_html__( 'Primary Color', 'tm-arden' )   => 'primary',
+			esc_html__( 'Secondary Color', 'tm-arden' ) => 'secondary',
+			esc_html__( 'Custom Color', 'tm-arden' )    => 'custom_color',
+			esc_html__( 'Gradient Color', 'tm-arden' )  => 'gradient',
+		),
+		'std'        => '',
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Custom Background Color', 'tm-arden' ),
+		'type'       => 'colorpicker',
+		'param_name' => 'custom_background_color',
+		'dependency' => array(
+			'element' => 'background_color',
+			'value'   => array( 'custom_color' ),
+		),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Background Gradient', 'tm-arden' ),
+		'type'       => 'gradient',
+		'param_name' => 'background_gradient',
+		'dependency' => array(
+			'element' => 'background_color',
+			'value'   => array( 'gradient' ),
+		),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Background Image', 'tm-arden' ),
+		'type'       => 'attach_image',
+		'param_name' => 'background_image',
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Hide Background Image on Tablets & Phones', 'tm-arden' ),
+		'type'       => 'checkbox',
+		'param_name' => 'hidden_bg_md_down',
+		'value'      => array( esc_html__( 'Yes', 'tm-arden' ) => '1' ),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Background Repeat', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'background_repeat',
+		'value'      => array(
+			esc_html__( 'No repeat', 'tm-arden' )         => 'no-repeat',
+			esc_html__( 'Tile', 'tm-arden' )              => 'repeat',
+			esc_html__( 'Tile Horizontally', 'tm-arden' ) => 'repeat-x',
+			esc_html__( 'Tile Vertically', 'tm-arden' )   => 'repeat-y',
+		),
+		'std'        => 'no-repeat',
+		'dependency' => array(
+			'element'   => 'background_image',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Background Size', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'background_size',
+		'value'      => array(
+			esc_html__( 'Auto', 'tm-arden' )    => 'auto',
+			esc_html__( 'Cover', 'tm-arden' )   => 'cover',
+			esc_html__( 'Contain', 'tm-arden' ) => 'contain',
+			esc_html__( 'Manual', 'tm-arden' )  => 'manual',
+		),
+		'std'        => 'cover',
+		'dependency' => array(
+			'element'   => 'background_image',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'       => $styling_tab,
+		'heading'     => esc_html__( 'Background Size (Manual Setting)', 'tm-arden' ),
+		'description' => esc_html__( 'Ex: 50% 100%', 'tm-arden' ),
+		'type'        => 'textfield',
+		'param_name'  => 'background_size_manual',
+		'dependency'  => array(
+			'element' => 'background_size',
+			'value'   => 'manual',
+		),
+	),
+	array(
+		'group'       => $styling_tab,
+		'heading'     => esc_html__( 'Background Position', 'tm-arden' ),
+		'description' => esc_html__( 'Ex: left center', 'tm-arden' ),
+		'type'        => 'textfield',
+		'param_name'  => 'background_position',
+		'dependency'  => array(
+			'element'   => 'background_image',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Scroll Effect', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'background_attachment',
+		'value'      => array(
+			esc_html__( 'Move with the content', 'tm-arden' ) => 'scroll',
+			esc_html__( 'Fixed at its position', 'tm-arden' ) => 'fixed',
+			esc_html__( 'Marque', 'tm-arden' )                => 'marque',
+		),
+		'std'        => 'scroll',
+		'dependency' => array(
+			'element'   => 'background_image',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Marque Direction', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'marque_direction',
+		'value'      => array(
+			esc_html__( 'To Left', 'tm-arden' )  => 'to-left',
+			esc_html__( 'To Right', 'tm-arden' ) => 'to-right',
+		),
+		'std'        => 'to-right',
+		'dependency' => array(
+			'element' => 'background_attachment',
+			'value'   => 'marque',
+		),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Marque Pause On Hover.', 'tm-arden' ),
+		'type'       => 'checkbox',
+		'param_name' => 'marque_pause_on_hover',
+		'value'      => array(
+			esc_html__( 'Yes', 'tm-arden' ) => '1',
+		),
+		'dependency' => array(
+			'element' => 'background_attachment',
+			'value'   => 'marque',
+		),
+	),
+	array(
+		'group'       => $styling_tab,
+		'heading'     => esc_html__( 'Background Overlay', 'tm-arden' ),
+		'description' => esc_html__( 'Choose an overlay background color.', 'tm-arden' ),
+		'type'        => 'dropdown',
+		'param_name'  => 'overlay_background',
+		'value'       => array(
+			esc_html__( 'None', 'tm-arden' )            => '',
+			esc_html__( 'Primary Color', 'tm-arden' )   => 'primary',
+			esc_html__( 'Secondary Color', 'tm-arden' ) => 'secondary',
+			esc_html__( 'Custom Color', 'tm-arden' )    => 'overlay_custom_background',
+		),
+	),
+	array(
+		'group'       => $styling_tab,
+		'heading'     => esc_html__( 'Custom Background Overlay', 'tm-arden' ),
+		'description' => esc_html__( 'Choose an custom background color overlay.', 'tm-arden' ),
+		'type'        => 'colorpicker',
+		'param_name'  => 'overlay_custom_background',
+		'std'         => '#000000',
+		'dependency'  => array( 'element' => 'overlay_background', 'value' => array( 'overlay_custom_background' ) ),
+	),
+	array(
+		'group'      => $styling_tab,
+		'heading'    => esc_html__( 'Opacity', 'tm-arden' ),
+		'type'       => 'number',
+		'param_name' => 'overlay_opacity',
+		'value'      => 100,
+		'min'        => 0,
+		'max'        => 100,
+		'step'       => 1,
+		'suffix'     => '%',
+		'std'        => 80,
+		'dependency' => array(
+			'element'   => 'overlay_background',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'      => $separator_tab,
+		'heading'    => esc_html__( 'Type', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'separator_type',
+		'value'      => array(
+			esc_html__( 'None', 'tm-arden' )         => '',
+			esc_html__( 'Triangle', 'tm-arden' )     => 'triangle',
+			esc_html__( 'Big Triangle', 'tm-arden' ) => 'big_triangle',
+			esc_html__( 'Half Circle', 'tm-arden' )  => 'half_circle',
+		),
+		'std'        => '',
+	),
+	array(
+		'group'      => $separator_tab,
+		'heading'    => esc_html__( 'Direction', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'separator_direction',
+		'value'      => array(
+			esc_html__( 'Up', 'tm-arden' )   => 'up',
+			esc_html__( 'Down', 'tm-arden' ) => 'down',
+			esc_html__( 'Both', 'tm-arden' ) => 'both',
+		),
+		'std'        => 'down',
+		'dependency' => array(
+			'element'   => 'separator_type',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'      => $separator_tab,
+		'heading'    => esc_html__( 'Separator Color 1', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'separator_color_1',
+		'value'      => array(
+			esc_html__( 'Primary Color', 'tm-arden' ) => 'primary_color',
+			esc_html__( 'Custom Color', 'tm-arden' )  => 'custom_color',
+		),
+		'std'        => 'custom_color',
+		'dependency' => array(
+			'element'   => 'separator_type',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'      => $separator_tab,
+		'heading'    => esc_html__( 'Custom Separator Color 1', 'tm-arden' ),
+		'type'       => 'colorpicker',
+		'param_name' => 'custom_separator_color_1',
+		'dependency' => array(
+			'element' => 'separator_color_1',
+			'value'   => array( 'custom_color' ),
+		),
+		'std'        => '#fff',
+	),
+	array(
+		'group'      => $separator_tab,
+		'heading'    => esc_html__( 'Separator Color 2', 'tm-arden' ),
+		'type'       => 'dropdown',
+		'param_name' => 'separator_color_2',
+		'value'      => array(
+			esc_html__( 'Transparent', 'tm-arden' )   => '',
+			esc_html__( 'Primary Color', 'tm-arden' ) => 'primary_color',
+			esc_html__( 'Custom Color', 'tm-arden' )  => 'custom_color',
+		),
+		'std'        => 'primary_color',
+		'dependency' => array(
+			'element'   => 'separator_type',
+			'not_empty' => true,
+		),
+	),
+	array(
+		'group'      => $separator_tab,
+		'heading'    => esc_html__( 'Custom Separator Color 2', 'tm-arden' ),
+		'type'       => 'colorpicker',
+		'param_name' => 'custom_separator_color_2',
+		'dependency' => array(
+			'element' => 'separator_color_2',
+			'value'   => array( 'custom_color' ),
+		),
+		'std'        => '#000',
+	),
+	array(
+		'group'       => $onepage_tab,
+		'heading'     => esc_html__( 'Skin', 'tm-arden' ),
+		'description' => esc_html__( 'Controls the skin of pagination when view this section.', 'tm-arden' ),
+		'type'        => 'dropdown',
+		'param_name'  => 'onepage_skin',
+		'value'       => array(
+			esc_html__( 'Dark', 'tm-arden' )  => 'dark',
+			esc_html__( 'Light', 'tm-arden' ) => 'light',
+		),
+		'std'         => 'dark',
+	),
+	array(
+		'group'       => $onepage_tab,
+		'heading'     => esc_html__( 'Title', 'tm-arden' ),
+		'description' => esc_html__( 'Controls the text of this section.', 'tm-arden' ),
+		'type'        => 'textfield',
+		'param_name'  => 'onepage_title',
+	),
+	array(
+		'group'       => $onepage_tab,
+		'heading'     => esc_html__( 'Anchor', 'tm-arden' ),
+		'description' => esc_html__( 'Add the unique anchor name. The anchor can used for anchor navigation in menu.', 'tm-arden' ),
+		'type'        => 'textfield',
+		'param_name'  => 'onepage_anchor',
+	),
+) ) );

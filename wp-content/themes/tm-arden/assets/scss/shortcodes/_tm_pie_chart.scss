@@ -1,0 +1,34 @@
+.tm-pie-chart {
+	text-align: center;
+	margin-bottom: 30px;
+	.chart {
+		position: relative;
+		width: 126px;
+		height: 126px;
+		margin: 0 auto 30px;
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.chart-text {
+			display: inline-block;
+			z-index: 2;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.chart-text:after {
+			content: '%';
+			margin-left: -0.1em;
+			font-size: .8em;
+		}
+	}
+	.heading {
+		margin-bottom: 12px;
+		h6 {
+			font-size: 20px;
+		}
+	}
+}

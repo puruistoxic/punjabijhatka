@@ -1,0 +1,102 @@
+.comment-nav-links,
+.page-pagination {
+	margin: -5px;
+	padding: 0;
+	li {
+		display: inline-block;
+		padding: 5px;
+		list-style-type: none;
+		span,
+		a {
+			display: block;
+			width: 42px;
+			height: 42px;
+			border: 1px solid #eeeeee;
+			background: #ffffff;
+			text-align: center;
+			font-size: 18px;
+			line-height: 40px;
+		}
+	}
+}
+
+.page-pagination {
+	margin-top: 15px;
+}
+
+.comment-nav-links {
+	ul {
+		padding: 0;
+	}
+}
+
+#comment-nav-above {
+	ul {
+		margin: 50px 0;
+	}
+}
+
+#comment-nav-below {
+	ul {
+		margin: 0 0 74px;
+	}
+}
+
+.page-links {
+	margin: 40px -5px 0;
+	@extend %clearfix;
+	> span,
+	> a {
+		display: block;
+		float: left;
+		margin: 5px;
+		width: 42px;
+		height: 42px;
+		border: 1px solid #eeeeee;
+		text-align: center;
+		font-size: 18px;
+		line-height: 40px;
+	}
+}
+
+.nav-links {
+	display: flex;
+	margin-bottom: 30px;
+	.nav-previous,
+	.nav-next {
+		width: 50%;
+	}
+	.nav-previous {
+		text-align: left;
+		a {
+			padding-left: 25px;
+			&:after {
+				left: 0;
+				content: '\f104';
+			}
+		}
+	}
+	.nav-next {
+		text-align: right;
+		align-items: flex-end;
+		a {
+			padding-right: 25px;
+			&:after {
+				right: 0;
+				content: '\f105';
+			}
+		}
+	}
+	a {
+		position: relative;
+		display: block;
+		&:after {
+			position: absolute;
+			top: 50%;
+			height: 10px;
+			font-family: FontAwesome;
+			line-height: 10px;
+			transform: translate(0, -50%);
+		}
+	}
+}

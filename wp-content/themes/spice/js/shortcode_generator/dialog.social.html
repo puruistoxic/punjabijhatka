@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>Create "Social" Shortcode</title>
+		<!-- Disable browser caching of dialog window -->
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<style type='text/css'>
+			/* Insert CSS for dialog here */
+			#addmore { font-size: 1.2em; color: #333; }
+			body { color: #444; font-family: "Open Sans",sans-serif; font-size: 13px; line-height: 1.4em; /*min-width: 600px;*/ }
+			body,div,p,h3{ margin:0; padding:0; }
+			body { font-family: "Open Sans",sans-serif;}
+			.form-horizontal .control-label {
+		        padding-top:7px;
+		        margin-bottom: 0;
+		        text-align: right
+		    }
+			.main-section > div{ padding: 5px 0; }
+			.main-section input{ padding: 2px 0; margin:0 5px; }
+			a#add-one { float: right; position: fixed; right: 0; background-color: rgb(118, 194, 6); padding: 5px 10px; top: 0; }
+			
+		</style>
+		
+	</head>
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Add Social Blocks</h3>	
+				</div>
+				<div class="col-xs-12">
+					<form id="socialblockShortcode" action="#button"  class="form-horizontal">
+						<div class="main-section">
+							<div class="button_field">
+								<div class="form-group">
+									<label for="network" class="col-xs-4 control-label">Network:</label>	
+									<div class="col-xs-8">					
+										<select id="network" name="network" class="form-control">
+											<option value="facebook">Facebook</option>
+											<option value="gplus">Google Plus</option>
+											<option value="dribbble">Dribbble</option>
+											<option value="linkedin">LinkedIn</option>	
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="jointext" class="col-xs-4 control-label">Join Text:</label>
+									<div class="col-xs-8">	
+										<input class="form-control" id="jointext" type="text" size="12" name="jointext"/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="link" class="col-xs-4 control-label">Link:</label>
+									<div class="col-xs-8">	
+										<input class="form-control" id="link" type="text" size="12" name="link"/>
+									</div>
+								</div>
+								<!-- The Facebook page name goes here -->
+								<div class="form-group">
+									<label for="fbpagename" class="col-xs-4 control-label">Facebook Page Name:</label>
+									<div class="col-xs-8">	
+										<input class="form-control" id="fbpagename" type="text" size="12" name="fbpagename"/>
+									</div>
+								</div>
+								<div class="form-group">
+								<!-- Google Plus Name goes here -->
+									<label for="googleplususer" class="col-xs-4 control-label">Google+ Profile name:</label>
+									<div class="col-xs-8">	
+										<input class="form-control" id="googleplususer" type="text" size="12" name="googleplususer"/>
+									</div>
+								</div>
+								<!--  -->
+								<div class="form-group">
+									<label for="googleplusapikey" class="col-xs-4 control-label">Google+ API Key:</label>
+									<div class="col-xs-8">	
+										<input class="form-control" id="googleplusapikey" type="text" size="12" name="googleplusapikey"/>
+									</div>
+								</div>								
+								 <div class="col-xs-8 pull-right">
+								  	<button class="btn btn-primary" id="addshortcode">
+								  		Add To Content
+								  	</button>
+								  </div>
+							</div>		
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var args = top.tinymce.activeEditor.windowManager.getParams();
+			var jQuery = args['jQuery'];
+			var editor = args['editor'];
+			var context = document.getElementsByTagName("body")[0];
+			jQuery(function($){
+				var x = 1; //initlal text box count
+				var section = $('.main-section', context);
+				
+				$('#socialblockShortcode', context).on('click', '#addshortcode', function(e) {
+					var str='';
+					e.preventDefault();
+					var network 			= $("form#socialblockShortcode #network option:selected", context).attr('value');
+					var jointext 			= $("form#socialblockShortcode #jointext", context).val();
+					var link 				= $("form#socialblockShortcode #link", context).val();
+					var fbpagename 			= $("form#socialblockShortcode #fbpagename", context).val();
+					var googleplususer 		= $("form#socialblockShortcode #googleplususer", context).val();
+					var googleplusapikey 	= $("form#socialblockShortcode #googleplusapikey", context).val();
+
+					console.log(network);
+					str='';
+
+					if( (''!=network && Boolean(network)) && (''!=jointext && Boolean(jointext)) && (''!=link && Boolean(link))) {
+					   	str+='[spice_social_block network="' + network + '" jointext="' + jointext + '" link="' + link + '"';
+					   	if(''!=fbpagename && Boolean(fbpagename)){
+					   		str+=' fbpagename="' + fbpagename + '"';
+					   	}
+					   	if( (''!=googleplususer && Boolean(googleplususer)) && (''!=googleplusapikey && Boolean(googleplusapikey)) ){
+					   		str+=' googleplususer="' + googleplususer + '"';
+					   		str+=' googleplusapikey="' + googleplusapikey + '"';
+					   	}
+					   	str+=']';
+		            }
+		            if(str!=='') 
+		            {
+						top.tinymce.activeEditor.execCommand('mceInsertContent', false, str);
+						editor.windowManager.close(this);		
+					}else
+					{
+						alert("Please add proper shortcode values!");
+					}	
+						
+				});
+				
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@extend %transit;
+	padding: 0 41px;
+	height: 57px;
+	outline: 0;
+	border: 3px solid #dec8ae;
+	border-radius: 30px;
+	background-color: transparent;
+	color: #333b57;
+	text-transform: uppercase;
+	letter-spacing: 1.75px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 51px;
+	&:hover,
+	&:active,
+	&:focus {
+		background: #dec8ae;
+		color: #ffffff;
+	}
+}
